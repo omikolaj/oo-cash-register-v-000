@@ -13,9 +13,10 @@ class CashRegister
 
   def apply_discount
     const = 0.0100
-    discount_dec = self.discount.to_f * const
+    discount_dec = self.discount * const
     discount = self.total * discount_dec
     self.total -= discount
+    puts "After the discount, the total comes to "
   end
 
 end
