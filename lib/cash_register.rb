@@ -12,8 +12,10 @@ class CashRegister
   end
 
   def apply_discount
-    discount = self.discount.to_f * .0100
-    self.total.to_f = self.total.to_f * discount
+    const = 0.0100
+    discount_dec = self.discount.to_f * const
+    discount = self.total * discount_dec
+    self.total -= discount
   end
 
 end
