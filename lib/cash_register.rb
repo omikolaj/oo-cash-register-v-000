@@ -13,7 +13,9 @@ class CashRegister
   def add_item(title, price, quantity = 1)
     #binding.pry
     self.total += (price * quantity)
-    @items << title
+    while(quantity > 0)
+      @items << title
+    end
   end
 
   def apply_discount
