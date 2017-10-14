@@ -16,7 +16,7 @@ class CashRegister
     discount_dec = self.discount * const
     discount = self.total * discount_dec
     self.total -= discount
-    "After the discount, the total comes to #{self.total}"
+    "After the discount, the total comes to #{self.total}.to_1"
   end
 
 end
